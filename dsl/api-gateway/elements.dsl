@@ -1,0 +1,1 @@
+apiGateway = softwareSystem "API Gateway"

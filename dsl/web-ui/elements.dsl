@@ -1,0 +1,1 @@
+webUi = softwareSystem "Web UI"
