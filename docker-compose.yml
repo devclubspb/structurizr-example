@@ -1,0 +1,9 @@
+name: structurizr
+
+services:
+  lite:
+    image: structurizr/lite:3234
+    ports:
+      - 8080:8080
+    volumes:
+      - ./dsl/:/usr/local/structurizr/
