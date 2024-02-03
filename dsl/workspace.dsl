@@ -29,6 +29,8 @@ workspace {
         !include parking-service/views.dsl
         !include web-ui/views.dsl
 
+        !include tasks
+
         systemLandscape "SystemLandscape" {
             include *
             autolayout lr
