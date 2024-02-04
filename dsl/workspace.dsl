@@ -1,20 +1,23 @@
+!constant ROOT_PATH ""
+// Or by url: https://raw.githubusercontent.com/devclubspb/structurizr-example/master/dsl
+
 workspace {
 
     !identifiers hierarchical
 
     model {
         biSystem = group "BI System" {
-            !include api-gateway/elements.dsl
-            !include company-branch-service/elements.dsl
-            !include employee-service/elements.dsl
-            !include parking-service/elements.dsl
-            !include web-ui/elements.dsl
+            !include "${ROOT_PATH}/api-gateway/elements.dsl"
+            !include "${ROOT_PATH}/company-branch-service/elements.dsl"
+            !include "${ROOT_PATH}/employee-service/elements.dsl"
+            !include "${ROOT_PATH}/parking-service/elements.dsl"
+            !include "${ROOT_PATH}/web-ui/elements.dsl"
 
-            !include api-gateway/relationships.dsl
-            !include company-branch-service/relationships.dsl
-            !include employee-service/relationships.dsl
-            !include parking-service/relationships.dsl
-            !include web-ui/relationships.dsl
+            !include "${ROOT_PATH}/api-gateway/relationships.dsl"
+            !include "${ROOT_PATH}/company-branch-service/relationships.dsl"
+            !include "${ROOT_PATH}/employee-service/relationships.dsl"
+            !include "${ROOT_PATH}/parking-service/relationships.dsl"
+            !include "${ROOT_PATH}/web-ui/relationships.dsl"
         }
 
         employeeUser = person "Employee"
@@ -23,13 +26,13 @@ workspace {
     }
 
     views {
-        !include api-gateway/views.dsl
-        !include company-branch-service/views.dsl
-        !include employee-service/views.dsl
-        !include parking-service/views.dsl
-        !include web-ui/views.dsl
+        !include "${ROOT_PATH}/api-gateway/views.dsl"
+        !include "${ROOT_PATH}/company-branch-service/views.dsl"
+        !include "${ROOT_PATH}/employee-service/views.dsl"
+        !include "${ROOT_PATH}/parking-service/views.dsl"
+        !include "${ROOT_PATH}/web-ui/views.dsl"
 
-        !include tasks
+        !include "${ROOT_PATH}/tasks"
 
         systemLandscape "SystemLandscape" {
             include *
